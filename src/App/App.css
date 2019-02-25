@@ -1,0 +1,63 @@
+:root {
+    --header-height: 80px;
+    --footer-height: 80px;
+
+    --shadow: 
+        0 2px 23px 0 rgba(0, 0, 0, 0.1),
+        0 2px 49px 0 rgba(0, 0, 0, 0.06);
+
+    --dark-accent: #B2415B;
+    --light-accent: #7091B6;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+button, input[type='submit'] {
+    min-width: 200px;
+    border-radius: 15px;
+    padding: 5px 0;
+    border: none;
+    
+}
+
+.bg-dark {
+    background-color: var(--dark-accent) !important;
+    color: #fff;
+}
+
+.light-accent {
+    color: var(--light-accent);
+}
+
+a.active {
+    color: var(--dark-accent) !important;
+    text-decoration: underline;
+}
+
+
+/* Layout */
+.app {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: var(--header-height) 1fr var(--footer-height);
+    grid-template-areas: "header" "content" "footer";
+    min-height: 100vh;
+    height: auto;
+    background: url("../assets/images/bg_web_60.png");
+}
+
+header.header {
+    grid-area: header;
+}
+
+main.content {
+    grid-area: content;
+}
+
+footer.footer {
+    grid-area: footer;
+}

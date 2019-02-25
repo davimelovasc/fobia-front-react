@@ -1,0 +1,12 @@
+img.logo {
+    max-width: 300px;
+}
+
+/* sm or smaller */
+@media (max-width: 576px) { 
+    
+    img.logo {
+        max-width: 200px;
+    }
+
+}
